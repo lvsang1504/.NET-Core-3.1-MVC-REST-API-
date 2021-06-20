@@ -22,9 +22,18 @@ namespace Commander.Controllers
         }
         //GET api/topics
         [HttpGet]
-        public ActionResult<IEnumerable<TopicReadDto>> GetAllCommands()
+        public ActionResult<IEnumerable<TopicReadDto>> GetAllTopics()
         {
             var topicItems = _repository.GetAllTopics();
+
+            return Ok(_mapper.Map<IEnumerable<TopicReadDto>>(topicItems));
+        }
+
+        //GET api/topics/search={key}
+        [HttpGet("search={key}")]
+        public ActionResult<IEnumerable<TopicReadDto>> GetSearchTopics(string key)
+        {
+            var topicItems = _repository.GetSearchTopics(key);
 
             return Ok(_mapper.Map<IEnumerable<TopicReadDto>>(topicItems));
         }
@@ -43,7 +52,7 @@ namespace Commander.Controllers
         
         //POST api/topics
         [HttpPost]
-        public ActionResult<TopicReadDto> CreateCommand(TopicCreateDto topicCreateDto)
+        public ActionResult<TopicReadDto> CreateTopic(TopicCreateDto topicCreateDto)
         {
             var topicModel = _mapper.Map<Topic>(topicCreateDto);
             _repository.CreateTopic(topicModel);
@@ -57,7 +66,7 @@ namespace Commander.Controllers
 
         //PUT api/topics/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateCommand(int id, TopicUpdateDto topicUpdateDto) 
+        public ActionResult UpdateTopic(int id, TopicUpdateDto topicUpdateDto) 
         {
             var topicModelFromRepo = _repository.GetTopicById(id);
             if(topicModelFromRepo == null) 
@@ -75,7 +84,7 @@ namespace Commander.Controllers
         }
         // PATCH api/topics/{id}
         [HttpPatch("{id}")]
-        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<TopicUpdateDto> patchDoc)
+        public ActionResult PartialTopicUpdate(int id, JsonPatchDocument<TopicUpdateDto> patchDoc)
         {
              var topicModelFromRepo = _repository.GetTopicById(id);
             if(topicModelFromRepo == null) 
@@ -102,7 +111,7 @@ namespace Commander.Controllers
 
         //DELETE api/topics/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteCommand(int id)
+        public ActionResult DeleteTopic(int id)
         {
             var topicModelFromRepo = _repository.GetTopicById(id);
             if(topicModelFromRepo == null) 

@@ -14,5 +14,8 @@ namespace Commander.Data
         public DbSet<Topic> Topics { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        //Name have to same in SQL Server
+        public DbSet<PeriodicReportItem> PeriodicReportItem { get; set; }
     }
 }

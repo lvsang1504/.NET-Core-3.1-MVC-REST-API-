@@ -38,6 +38,8 @@ namespace Commander
             services.AddScoped<ITopicRepo, SqlTopicRepo>();
 
             services.AddScoped<IUserRepo, SqlUserRepo>();
+
+            services.AddScoped<IPeriodicReportItemRepo, SqlPeriodicReportItemRepo>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

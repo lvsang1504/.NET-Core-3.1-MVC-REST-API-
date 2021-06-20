@@ -7,6 +7,7 @@ namespace Commander.Data
     {
         bool SaveChanges();
         IEnumerable<Topic> GetAllTopics();
+        IEnumerable<Topic> GetSearchTopics(string key);
         Topic GetTopicById(int id);
         void CreateTopic(Topic topic);
         void UpdateTopic(Topic topic);

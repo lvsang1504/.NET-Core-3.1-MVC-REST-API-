@@ -3,10 +3,29 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Commander.Migrations
 {
-    public partial class InitalMigration : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "PeriodicReportItem",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TopicCode = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    IdStudent = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    Field = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    DateStarted = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateEnd = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PeriodicReportItem", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Topics",
                 columns: table => new
@@ -35,8 +54,8 @@ namespace Commander.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    KeyFirebase = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
                     IdStudent = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    IdFirebase = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Class = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -50,6 +69,9 @@ namespace Commander.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "PeriodicReportItem");
+
             migrationBuilder.DropTable(
                 name: "Topics");
 

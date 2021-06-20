@@ -8,6 +8,10 @@ namespace Commander.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(int.MaxValue)]
+        public string KeyFirebase { get; set; }
+
+        [Required]
         [MaxLength(10)]
         public string IdStudent { get; set; }
 
