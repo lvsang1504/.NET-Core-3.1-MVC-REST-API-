@@ -40,6 +40,9 @@ namespace Commander
             services.AddScoped<IUserRepo, SqlUserRepo>();
 
             services.AddScoped<IPeriodicReportItemRepo, SqlPeriodicReportItemRepo>();
+
+            services.AddScoped<INotificationRepo, SqlNotificationRepo>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

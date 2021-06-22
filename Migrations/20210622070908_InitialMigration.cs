@@ -8,6 +8,24 @@ namespace Commander.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Notifications",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    IdStudent = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    TimeCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    isRead = table.Column<bool>(type: "bit", nullable: false),
+                    isDelete = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Notifications", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PeriodicReportItem",
                 columns: table => new
                 {
@@ -69,6 +87,9 @@ namespace Commander.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Notifications");
+
             migrationBuilder.DropTable(
                 name: "PeriodicReportItem");
 

@@ -17,5 +17,7 @@ namespace Commander.Data
 
         //Name have to same in SQL Server
         public DbSet<PeriodicReportItem> PeriodicReportItem { get; set; }
+
+        public DbSet<Notification> Notifications { get; set; }
     }
 }

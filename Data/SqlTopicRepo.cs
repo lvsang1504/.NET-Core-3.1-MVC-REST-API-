@@ -47,7 +47,8 @@ namespace Commander.Data
             foreach (Topic topic in topics)
             {
                 string nameTopic = topic.Name.ToLower().Trim();
-                if (nameTopic.Contains(key.ToLower())
+                string idTopic = topic.TopicCode.ToLower().Trim();
+                if (idTopic.Contains(key.ToLower())
                     || RemoveUnicode.Remove(nameTopic)
                         .Contains(RemoveUnicode.Remove(key).ToLower().Trim())
                     )
