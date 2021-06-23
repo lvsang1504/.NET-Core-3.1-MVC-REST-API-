@@ -49,13 +49,12 @@ namespace Commander.Data
             foreach (Notification notification in notifications)
             {
                 string idStudent = notification.IdStudent.ToLower().Trim();
-                if (idStudent.CompareTo(id.ToLower()) == 0)
+                if (idStudent.CompareTo(id.ToLower()) == 0 && !notification.isDelete)
                 {
                     notificationsResult.Add(notification);
                 }
             }
-
-            return notificationsResult;
+            return notificationsResult.OrderByDescending(d => d.TimeCreated);
         }
 
         public bool SaveChanges()
