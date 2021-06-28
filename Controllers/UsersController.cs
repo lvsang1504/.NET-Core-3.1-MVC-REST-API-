@@ -22,7 +22,7 @@ namespace Commander.Controllers
         }
         //GET api/users
         [HttpGet]
-        public ActionResult<IEnumerable<UserReadDto>> GetAllCommands()
+        public ActionResult<IEnumerable<UserReadDto>> GetAllUsers()
         {
             var userItems = _repository.GetAllUsers();
 
@@ -40,10 +40,22 @@ namespace Commander.Controllers
             }
             return NotFound();
         }
-        
+
+        //GET api/users/firebaseKey={id}
+        [HttpGet("firebaseKey={id}", Name = "GetUserByIdFirebase")]
+        public ActionResult<UserReadDto> GetUserByIdFirebase(string id)
+        {
+            var userItem = _repository.GetUserByIdFirebase(id);
+            if (userItem != null)
+            {
+                return Ok(_mapper.Map<UserReadDto>(userItem));
+            }
+            return NotFound();
+        }
+
         //POST api/users
         [HttpPost]
-        public ActionResult<UserReadDto> CreateCommand(UserCreateDto userCreateDto)
+        public ActionResult<UserReadDto> CreateUser(UserCreateDto userCreateDto)
         {
             var userModel = _mapper.Map<User>(userCreateDto);
             _repository.CreateUser(userModel);
@@ -57,7 +69,7 @@ namespace Commander.Controllers
 
         //PUT api/users/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateCommand(int id, UserUpdateDto userUpdateDto) 
+        public ActionResult UpdateUser(int id, UserUpdateDto userUpdateDto) 
         {
             var userModelFromRepo = _repository.GetUserById(id);
             if(userModelFromRepo == null) 
@@ -73,9 +85,29 @@ namespace Commander.Controllers
 
             return NoContent();
         }
+
+        //PUT api/users/firebaseKey={firebaseKey}
+        [HttpPut("update={firebaseKey}")]
+        public ActionResult UpdateUserByFirebaseKey(string  firebaseKey, UserUpdateDto userUpdateDto)
+        {
+            var userModelFromRepo = _repository.GetUserByIdFirebase(firebaseKey);
+            if (userModelFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(userUpdateDto, userModelFromRepo);
+
+            _repository.UpdateUser(userModelFromRepo);
+
+            _repository.SaveChanges();
+
+            return NoContent();
+        }
+
         // PATCH api/users/{id}
         [HttpPatch("{id}")]
-        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<UserUpdateDto> patchDoc)
+        public ActionResult PartialUserUpdate(int id, JsonPatchDocument<UserUpdateDto> patchDoc)
         {
              var userModelFromRepo = _repository.GetUserById(id);
             if(userModelFromRepo == null) 
@@ -102,7 +134,7 @@ namespace Commander.Controllers
 
         //DELETE api/users/{id}
         [HttpDelete("{id}")]
-        public ActionResult DeleteCommand(int id)
+        public ActionResult DeleteUser(int id)
         {
             var userModelFromRepo = _repository.GetUserById(id);
             if(userModelFromRepo == null) 

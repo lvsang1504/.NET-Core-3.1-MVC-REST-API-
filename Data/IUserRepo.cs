@@ -7,7 +7,10 @@ namespace Commander.Data
     {
         bool SaveChanges();
         IEnumerable<User> GetAllUsers();
+
         User GetUserById(int id);
+
+        User GetUserByIdFirebase(string idFirebase);
         void CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(User user);

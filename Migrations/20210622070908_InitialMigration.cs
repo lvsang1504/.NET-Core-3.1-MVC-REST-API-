@@ -72,7 +72,7 @@ namespace Commander.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    KeyFirebase = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: false),
+                    KeyFirebase = table.Column<string>(type: "nvarchar(max)", maxLength: 2147483647, nullable: true),
                     IdStudent = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),

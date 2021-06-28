@@ -8,6 +8,8 @@ namespace Commander.Dtos
 
         public string IdStudent { get; set; }
 
+        public string KeyFirebase { get; set; }
+
         public string Name { get; set; }
 
         public string Email { get; set; }

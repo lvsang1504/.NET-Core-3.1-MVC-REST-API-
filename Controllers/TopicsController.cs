@@ -40,7 +40,7 @@ namespace Commander.Controllers
 
         //GET api/topics/{id}
         [HttpGet("{id}", Name = "GetTopicById")]
-        public ActionResult<CommandReadDto> GetTopicById(int id)
+        public ActionResult<TopicReadDto> GetTopicById(int id)
         {
             var topicItem = _repository.GetTopicById(id);
             if (topicItem != null)

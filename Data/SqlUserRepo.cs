@@ -42,6 +42,11 @@ namespace Commander.Data
             return _context.Users.FirstOrDefault(p => p.Id == id);
         }
 
+        public User GetUserByIdFirebase(string idFirebase)
+        {
+            return _context.Users.FirstOrDefault(p => p.KeyFirebase == idFirebase);
+        }
+
         public bool SaveChanges()
         {
            return (_context.SaveChanges() >= 0);

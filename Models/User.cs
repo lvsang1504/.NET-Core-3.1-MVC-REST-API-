@@ -7,8 +7,6 @@ namespace Commander.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(int.MaxValue)]
         public string KeyFirebase { get; set; }
 
         [Required]

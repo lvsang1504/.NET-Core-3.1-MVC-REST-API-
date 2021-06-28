@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADVbUzAz9mUiPJzBmxJbBEQAAAAACAAAAAAAQZgAAAAEAACAAAABdcbzibX8NB2TgenWN4BD9LG3Yemgz2JetzzfIepHh4wAAAAAOgAAAAAIAACAAAADxi2NtSpMnJUiLioFP4NCwaADaXWzaF2ZTjKmELZutYIAAAAArKQZzsOqEmbP6v++i+zUGtGe+wrqBBORFrmRaXKYzyXMqZbWq8+/YwRM0WlPa4nDg/eWheTpiM7GZTO4l7SpDxMVCwRCfV+WeMPxtAF/eSbSqPYZpqPdtbPx7Deu5s2EdLuCVgkv3pANLDB0frBSVmdpoyOdRx/gxDzcYmICF5kAAAACpHcyym0cl2oqIdZsnih+EyGJQEVPFPL9RvAQVXvCKXjVa9ly9AifWJaTQHRl5jNvqHVLSMAXCyMk/x4HYTwcA</EncryptedPassword>
+    <History>True|2021-06-28T14:00:17.6885691Z;True|2021-06-26T22:09:49.8107213+07:00;True|2021-06-26T21:43:11.0629285+07:00;True|2021-06-24T12:06:29.1618174+07:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Commander.Data.CommanderContext">
+      <Value>Data Source=tcp:ptithcmdbserver.database.windows.net,1433%3bInitial Catalog=PTITHCM_db%3bUser Id=ptithcm%40ptithcmdbserver%3bPassword=daikaka999%40</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

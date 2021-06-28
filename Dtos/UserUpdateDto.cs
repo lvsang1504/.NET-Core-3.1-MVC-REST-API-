@@ -8,6 +8,8 @@ namespace Commander.Dtos
         [MaxLength(10)]
         public string IdStudent { get; set; }
 
+        public string KeyFirebase { get; set; }
+
         [Required]
         [MaxLength(250)]
         public string Name { get; set; }
