@@ -174,8 +174,6 @@ namespace Commander.Migrations
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("KeyFirebase")
-                        .IsRequired()
-                        .HasMaxLength(2147483647)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -186,6 +184,9 @@ namespace Commander.Migrations
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

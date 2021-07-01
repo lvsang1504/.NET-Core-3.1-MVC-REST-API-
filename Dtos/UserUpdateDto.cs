@@ -1,13 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Commander.Dtos 
+namespace Commander.Dtos
 {
     public class UserUpdateDto
     {
         [Required]
         [MaxLength(10)]
         public string IdStudent { get; set; }
-
+        public int Role { get; set; }
         public string KeyFirebase { get; set; }
 
         [Required]

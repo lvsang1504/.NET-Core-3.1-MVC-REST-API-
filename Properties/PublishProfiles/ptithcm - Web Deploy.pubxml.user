@@ -7,11 +7,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADVbUzAz9mUiPJzBmxJbBEQAAAAACAAAAAAAQZgAAAAEAACAAAABdcbzibX8NB2TgenWN4BD9LG3Yemgz2JetzzfIepHh4wAAAAAOgAAAAAIAACAAAADxi2NtSpMnJUiLioFP4NCwaADaXWzaF2ZTjKmELZutYIAAAAArKQZzsOqEmbP6v++i+zUGtGe+wrqBBORFrmRaXKYzyXMqZbWq8+/YwRM0WlPa4nDg/eWheTpiM7GZTO4l7SpDxMVCwRCfV+WeMPxtAF/eSbSqPYZpqPdtbPx7Deu5s2EdLuCVgkv3pANLDB0frBSVmdpoyOdRx/gxDzcYmICF5kAAAACpHcyym0cl2oqIdZsnih+EyGJQEVPFPL9RvAQVXvCKXjVa9ly9AifWJaTQHRl5jNvqHVLSMAXCyMk/x4HYTwcA</EncryptedPassword>
-    <History>True|2021-06-28T14:00:17.6885691Z;True|2021-06-26T22:09:49.8107213+07:00;True|2021-06-26T21:43:11.0629285+07:00;True|2021-06-24T12:06:29.1618174+07:00;</History>
+    <History>True|2021-07-01T02:39:37.3603210Z;False|2021-07-01T09:38:47.3921137+07:00;False|2021-07-01T09:35:00.8507110+07:00;False|2021-07-01T09:31:57.3788977+07:00;False|2021-07-01T09:28:25.1185040+07:00;False|2021-07-01T09:09:33.5748726+07:00;False|2021-07-01T09:06:22.3642386+07:00;True|2021-06-28T21:00:17.6885691+07:00;True|2021-06-26T22:09:49.8107213+07:00;True|2021-06-26T21:43:11.0629285+07:00;True|2021-06-24T12:06:29.1618174+07:00;</History>
   </PropertyGroup>
-  <ItemGroup>
-    <EFMigrations Include="Commander.Data.CommanderContext">
-      <Value>Data Source=tcp:ptithcmdbserver.database.windows.net,1433%3bInitial Catalog=PTITHCM_db%3bUser Id=ptithcm%40ptithcmdbserver%3bPassword=daikaka999%40</Value>
-    </EFMigrations>
-  </ItemGroup>
 </Project>

@@ -7,6 +7,8 @@ namespace Commander.Models
         [Key]
         public int Id { get; set; }
 
+        public int Role { get; set; }
+
         public string KeyFirebase { get; set; }
 
         [Required]

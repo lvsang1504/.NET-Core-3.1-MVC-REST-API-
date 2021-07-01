@@ -3,7 +3,4 @@
   <parameter name="IIS Web Application Name" description="" value="ptithcm" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\ASP\.NET\\Commander\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="Commander.Data.CommanderContext" description="" value="Data Source=tcp:ptithcmdbserver.database.windows.net,1433;Initial Catalog=PTITHCM_db;User Id=ptithcm@ptithcmdbserver;Password=daikaka999@" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\ASP\.NET\\Commander\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\Commander\.Data\.CommanderContext\.sql$" />
-  </parameter>
 </parameters>

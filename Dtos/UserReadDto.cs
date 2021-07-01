@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Commander.Dtos 
+namespace Commander.Dtos
 {
     public class UserReadDto
     {
         public int Id { get; set; }
+        public int Role { get; set; }
 
         public string IdStudent { get; set; }
 

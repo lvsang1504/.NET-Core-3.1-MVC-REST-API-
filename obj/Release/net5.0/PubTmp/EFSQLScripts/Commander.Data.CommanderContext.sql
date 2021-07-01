@@ -11,7 +11,7 @@ GO
 BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210622070908_InitialMigration')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210701015409_InitalMigration')
 BEGIN
     CREATE TABLE [Notifications] (
         [Id] int NOT NULL IDENTITY,
@@ -26,7 +26,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210622070908_InitialMigration')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210701015409_InitalMigration')
 BEGIN
     CREATE TABLE [PeriodicReportItem] (
         [Id] int NOT NULL IDENTITY,
@@ -42,7 +42,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210622070908_InitialMigration')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210701015409_InitalMigration')
 BEGIN
     CREATE TABLE [Topics] (
         [Id] int NOT NULL IDENTITY,
@@ -61,10 +61,11 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210622070908_InitialMigration')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210701015409_InitalMigration')
 BEGIN
     CREATE TABLE [Users] (
         [Id] int NOT NULL IDENTITY,
+        [Role] int NOT NULL,
         [KeyFirebase] nvarchar(max) NULL,
         [IdStudent] nvarchar(10) NOT NULL,
         [Name] nvarchar(250) NOT NULL,
@@ -76,10 +77,10 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210622070908_InitialMigration')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20210701015409_InitalMigration')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20210622070908_InitialMigration', N'5.0.6');
+    VALUES (N'20210701015409_InitalMigration', N'5.0.6');
 END;
 GO
 

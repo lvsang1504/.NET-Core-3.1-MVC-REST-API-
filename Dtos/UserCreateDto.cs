@@ -4,6 +4,7 @@ namespace Commander.Dtos
 {
     public class UserCreateDto
     {
+        public int Role { get; set; }
         [Required]
         [MaxLength(10)]
         public string IdStudent { get; set; }
