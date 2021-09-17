@@ -19,5 +19,7 @@ namespace Commander.Data
         public DbSet<PeriodicReportItem> PeriodicReportItem { get; set; }
 
         public DbSet<Notification> Notifications { get; set; }
+
+        public DbSet<Register> Registers { get; set; }
     }
 }

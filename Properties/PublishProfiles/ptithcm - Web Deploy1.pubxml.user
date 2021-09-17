@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhq1r4KOPFEmuA0OFrzay4QAAAAACAAAAAAAQZgAAAAEAACAAAAAON46stU5QPSOHJmdbK/JJP5FklmpTXReJkuF8X6tWaAAAAAAOgAAAAAIAACAAAAAvBdFnL0TdiJgadycu1cVcOaa8+2oGV+0LJ7DjP6ZX54AAAADZjbJWkb3ummSGT13fApcD6xC9CQNUJwVSTk2/1DR/64ChOVAMtcR56fYGsWPRIvmtupaamXXJ/LJgfuAhQvLk8JszQVjI7tOhp77HBYj4ljsH64B4BLkUD7IaeR6Kk22tkQccNK3rqNxT5MDEVrWsSgesIrAaD/jYvTWLPnD/AEAAAABkqp/Y/YAw82VIWn7a4lwdu9w2Jgyxu3aIY85JkzWfZOwiEQ7hfbu6jfAhMn436gFaeRuwGoWLdUJYOxjU6KSh</EncryptedPassword>
+    <History>True|2021-07-08T04:06:54.7999872Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="Commander.Data.CommanderContext">
+      <Value>Data Source=tcp:ptitdbserver.database.windows.net,1433%3bInitial Catalog=Commander_db%3bUser Id=ptithcm%40ptitdbserver%3bPassword=Daikaka999%40</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -42,6 +42,7 @@ namespace Commander
             services.AddScoped<IPeriodicReportItemRepo, SqlPeriodicReportItemRepo>();
 
             services.AddScoped<INotificationRepo, SqlNotificationRepo>();
+            services.AddScoped<IRegisterRepo, SqlRegisterRepo>();
 
         }
 

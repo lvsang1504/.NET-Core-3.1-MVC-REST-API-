@@ -45,6 +45,22 @@ namespace Commander.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Registers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdTopic = table.Column<int>(type: "int", nullable: false),
+                    IdStudent = table.Column<string>(type: "nvarchar(255)", maxLength: 10, nullable: true),
+                    Role = table.Column<int>(type: "int", nullable: false),
+                    BrowseTopic = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Registers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Topics",
                 columns: table => new
                 {
@@ -93,6 +109,9 @@ namespace Commander.Migrations
 
             migrationBuilder.DropTable(
                 name: "PeriodicReportItem");
+
+            migrationBuilder.DropTable(
+                name: "Registers");
 
             migrationBuilder.DropTable(
                 name: "Topics");

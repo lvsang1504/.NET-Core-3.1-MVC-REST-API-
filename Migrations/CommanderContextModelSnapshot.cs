@@ -98,6 +98,31 @@ namespace Commander.Migrations
                     b.ToTable("PeriodicReportItem");
                 });
 
+            modelBuilder.Entity("Commander.Models.Register", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BrowseTopic")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdStudent")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("IdTopic")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Registers");
+                });
+
             modelBuilder.Entity("Commander.Models.Topic", b =>
                 {
                     b.Property<int>("Id")
