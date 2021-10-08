@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET\\Commander\\Commander.csproj": {}
+    "E:\\ASP.NET\\Commander\\Commander.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET\\Commander\\Commander.csproj": {
+    "E:\\ASP.NET\\Commander\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\Commander\\Commander.csproj",
+        "projectUniqueName": "E:\\ASP.NET\\Commander\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "D:\\ASP.NET\\Commander\\Commander.csproj",
-        "packagesPath": "C:\\Users\\luong\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\Commander\\obj\\",
+        "projectPath": "E:\\ASP.NET\\Commander\\Commander.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.NET\\Commander\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\luong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

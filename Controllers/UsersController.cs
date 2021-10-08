@@ -53,6 +53,16 @@ namespace Commander.Controllers
             return NotFound();
         }
 
+        //GET api/users/role={id}
+        [HttpGet("role={id}", Name = "GetUserByIdRole")]
+        public ActionResult<IEnumerable<UserReadDto>> GetUserByIdRole(int id)
+        {
+            var userItems = _repository.GetUserByIdRole(id);
+            
+            return Ok(_mapper.Map<IEnumerable<UserReadDto>>(userItems));
+            
+        }
+
         //POST api/users
         [HttpPost]
         public ActionResult<UserReadDto> CreateUser(UserCreateDto userCreateDto)

@@ -14,5 +14,6 @@ namespace Commander.Data
         void CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(User user);
+        IEnumerable<User> GetUserByIdRole(int id);
     }
 }

@@ -47,6 +47,21 @@ namespace Commander.Data
             return _context.Users.FirstOrDefault(p => p.KeyFirebase == idFirebase);
         }
 
+        public IEnumerable<User> GetUserByIdRole(int id)
+        {
+            List<User> users = _context.Users.ToList();
+            List<User> usersResult = new List<User>();
+            foreach (User user in users)
+            {
+                int role = user.Role;
+                if (role == id)
+                {
+                    usersResult.Add(user);
+                }
+            }
+            return usersResult;
+        }
+
         public bool SaveChanges()
         {
            return (_context.SaveChanges() >= 0);

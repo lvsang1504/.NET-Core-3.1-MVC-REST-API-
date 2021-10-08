@@ -109,7 +109,7 @@ namespace Commander.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("IdStudent")
-                        .HasMaxLength(10)
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("IdTopic")

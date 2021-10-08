@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Commander.Migrations
 {
     [DbContext(typeof(CommanderContext))]
-    [Migration("20210831092850_InitalMigration")]
+    [Migration("20211007131622_InitalMigration")]
     partial class InitalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,7 +111,7 @@ namespace Commander.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("IdStudent")
-                        .HasMaxLength(10)
+                        .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("IdTopic")

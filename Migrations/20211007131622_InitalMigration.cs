@@ -51,7 +51,7 @@ namespace Commander.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdTopic = table.Column<int>(type: "int", nullable: false),
-                    IdStudent = table.Column<string>(type: "nvarchar(255)", maxLength: 10, nullable: true),
+                    IdStudent = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Role = table.Column<int>(type: "int", nullable: false),
                     BrowseTopic = table.Column<int>(type: "int", nullable: false)
                 },
