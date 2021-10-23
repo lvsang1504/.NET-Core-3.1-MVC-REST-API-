@@ -125,7 +125,6 @@ E:\ASP.NET\Commander\obj\Debug\net5.0\staticwebassets\Commander.StaticWebAssets.
 E:\ASP.NET\Commander\obj\Debug\net5.0\staticwebassets\Commander.StaticWebAssets.xml
 E:\ASP.NET\Commander\obj\Debug\net5.0\scopedcss\bundle\Commander.styles.css
 E:\ASP.NET\Commander\obj\Debug\net5.0\Commander.RazorTargetAssemblyInfo.cache
-E:\ASP.NET\Commander\obj\Debug\net5.0\Commander.csproj.CopyComplete
 E:\ASP.NET\Commander\obj\Debug\net5.0\Commander.dll
 E:\ASP.NET\Commander\obj\Debug\net5.0\ref\Commander.dll
 E:\ASP.NET\Commander\obj\Debug\net5.0\Commander.pdb
